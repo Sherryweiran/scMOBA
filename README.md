@@ -29,8 +29,10 @@ The training dataset includes:
 
 Each task is converted into an instruction format:
 Feature (gene expression) + Question → Answer
-The implementation of these datasets can be found in:
-`src/datasets/dataset.py`
+The dataset construction and task definitions are implemented in  
+`src/datasets/muti_dataset.py`
+All tasks are combined through a unified dataset loader implemented in
+`UniDatasets` (see `src/datasets//muti_dataset.py`).
 ## Installation
 ```bash
 git clone https://github.com/Sherryweiran/scMOBA.git
