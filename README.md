@@ -23,6 +23,7 @@ The training dataset includes:
 - Masked gene prediction
 - Gene expression ranking
 - Spatial transcriptomics reasoning
+
 Each task is converted into an instruction format:
 Feature (gene expression) + Question → Answer
 The implementation of these datasets can be found in:
