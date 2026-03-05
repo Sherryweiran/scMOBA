@@ -6,13 +6,15 @@ scMOBA integrates a **gene feature encoder**, a **cross-attention projector**, a
 
 The architecture consists of three main components:
 1. **Gene Feature Encoder**
-   Encodes gene expression features from single-cell or spatial omics data into dense representations.  
-   We initialize the encoder using the pretrained **GeneFormer (gf-6L-30M-i2048)** model.
+
+   Encodes gene expression features from single-cell or spatial omics data into dense representations. We initialize the encoder using the pretrained **GeneFormer** model.
 2. **Cross-Attention Projector**
+
    Aligns gene feature representations with the token space of the language model.  
    This module bridges biological features and language tokens through cross-modal attention.
 
 3. **Large Language Model (LLM)**
+
    The LLM Inference backbone of scMOBA, initialized with **Llama-3.2-1B**, enabling conversational biological inference and downstream task prediction.
 
 ## Installation
@@ -27,9 +29,9 @@ conda activate scmoba
 
 To train **scMOBA**, we initialize the model with pretrained weights to achieve better performance and faster convergence.
 #### Gene Feature Encoder
-We initialize the gene feature encoder with **Geneformer (gf-6L-30M-i2048)**.
-Please download the initialization weight **gf-6L-30M-i2048** from the Geneformer repository:
-https://huggingface.co/ctheodoris/Geneformer/tree/main/geneformer/gf-6L-30M-i2048
+We initialize the gene feature encoder with **Geneformer**.
+Please download the initialization weight from the Geneformer repository:
+https://huggingface.co/ctheodoris/Geneformer/tree/main/Geneformer-V1-10M
 
 #### LLM
 The language backbone is initialized with **Llama-3.2-1B**.
@@ -118,6 +120,6 @@ If our project are helpful to you, please consider citing:
 
 ## Acknowledgement
 We gratefully acknowledge the open-source projects that inspired and supported this work, including 
-[GeneFormer](https://github.com/broadinstitute/Geneformer) and 
+[GeneFormer](https://github.com/jkobject/geneformer) and 
 [LLaMA](https://github.com/meta-llama/llama). 
 We thank the respective teams for making their code and models publicly available.
