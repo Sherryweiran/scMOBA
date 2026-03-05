@@ -6,11 +6,14 @@ scMOBA integrates a **gene feature encoder**, a **cross-attention projector**, a
 
 The architecture consists of three main components:
 1. **Gene Feature Encoder**
+   
    Encodes gene expression features from single-cell or spatial omics data into dense representations. We initialize the encoder using the pretrained **GeneFormer** model.
-2. **Cross-Attention Projector**
+3. **Cross-Attention Projector**
+   
    Aligns gene feature representations with the token space of the language model.  
    This module bridges biological features and language tokens through cross-modal attention.
-3. **Large Language Model (LLM)**
+5. **Large Language Model (LLM)**
+
    The LLM Inference backbone of scMOBA, initialized with **Llama-3.2-1B**, enabling conversational biological inference and downstream task prediction.
 ## Training Tasks
 scMOBA is trained with a unified **Feature–Question–Answer (FQA)** framework across multiple biological tasks.
